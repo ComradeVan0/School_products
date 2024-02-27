@@ -34,29 +34,29 @@ namespace Товары_школы_Кравец
 
         private void GetUserRole()
         {
-            switch (ProjectManager.UserRole)
-            {
-                case 0:
-                    AddButton.Visibility = Visibility.Collapsed;
-                    EditButton.Visibility = Visibility.Collapsed;
-                    DeleteBtn.Visibility = Visibility.Collapsed;
-                    SellJournalBtn.Visibility = Visibility.Collapsed; break;
-                case 1:
-                    AddButton.Visibility = Visibility.Visible;
-                    EditButton.Visibility = Visibility.Visible;
-                    DeleteBtn.Visibility = Visibility.Visible;
-                    SellJournalBtn.Visibility = Visibility.Visible; break;
-                case 2:
-                    AddButton.Visibility = Visibility.Collapsed;
-                    EditButton.Visibility = Visibility.Collapsed;
-                    DeleteBtn.Visibility = Visibility.Collapsed;
-                    SellJournalBtn.Visibility = Visibility.Visible; break;
-                case 3:
-                    AddButton.Visibility = Visibility.Collapsed;
-                    EditButton.Visibility = Visibility.Collapsed;
-                    DeleteBtn.Visibility = Visibility.Collapsed;
-                    SellJournalBtn.Visibility = Visibility.Collapsed; break;
-            }
+            //switch (ProjectManager.UserRole)
+            //{
+            //    case 0:
+            //        AddButton.Visibility = Visibility.Collapsed;
+            //        EditButton.Visibility = Visibility.Collapsed;
+            //        DeleteBtn.Visibility = Visibility.Collapsed;
+            //        SellJournalBtn.Visibility = Visibility.Collapsed; break;
+            //    case 1:
+            //        AddButton.Visibility = Visibility.Visible;
+            //        EditButton.Visibility = Visibility.Visible;
+            //        DeleteBtn.Visibility = Visibility.Visible;
+            //        SellJournalBtn.Visibility = Visibility.Visible; break;
+            //    case 2:
+            //        AddButton.Visibility = Visibility.Collapsed;
+            //        EditButton.Visibility = Visibility.Collapsed;
+            //        DeleteBtn.Visibility = Visibility.Collapsed;
+            //        SellJournalBtn.Visibility = Visibility.Visible; break;
+            //    case 3:
+            //        AddButton.Visibility = Visibility.Collapsed;
+            //        EditButton.Visibility = Visibility.Collapsed;
+            //        DeleteBtn.Visibility = Visibility.Collapsed;
+            //        SellJournalBtn.Visibility = Visibility.Collapsed; break;
+            //}
         }
 
         private void UpdateProducts()

@@ -39,22 +39,22 @@ namespace Товары_школы_Кравец
             IsBlocked = IsNavigationBlocked;
         }
 
-        private void GoBack_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (Product.ID != 0)
-                    ProjectManager.Context.Entry(Product).Reload();
-            }
-            catch (Exception ex)
-            {
-                ProjectManager.ShowError(ex.Message);
-            }
-            finally
-            {
-                ProjectManager.MainFrame.GoBack();
-            }
-        }
+        //private void GoBack_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (Product.ID != 0)
+        //            ProjectManager.Context.Entry(Product).Reload();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ProjectManager.ShowError(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        ProjectManager.MainFrame.GoBack();
+        //    }
+        //}
 
         private childItem FindVisualChild<childItem>(DependencyObject obj) where childItem : DependencyObject
         {
@@ -157,11 +157,11 @@ namespace Товары_школы_Кравец
             }
         }
 
-        private void DeleteImage_Click(object sender, RoutedEventArgs e)
-        {
-            mainImage.Source = null;
-            Product.MainImagePath = null;
-        }
+        //private void DeleteImage_Click(object sender, RoutedEventArgs e)
+        //{
+        //    mainImage.Source = null;
+        //    Product.MainImagePath = null;
+        //}
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
