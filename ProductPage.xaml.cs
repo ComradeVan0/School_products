@@ -173,25 +173,25 @@ namespace Товары_школы_Кравец
         {
             try
             {
-                Product selectedProduct = productsLView.SelectedItem as Product;
-                if (selectedProduct.ProductSale.Count != 0)
-                {
-                    ProjectManager.ShowWarning("Нельзя удалить уже проданный товар!");
-                    return;
-                }
+                //Product selectedProduct = productsLView.SelectedItem as Product;
+                //if (selectedProduct.ProductSale.Count != 0)
+                //{
+                //    ProjectManager.ShowWarning("Нельзя удалить уже проданный товар!");
+                //    return;
+                //}
 
-                MessageBoxResult result = ProjectManager.ShowQuestion("Вы действительно хотите удалить выбранный товар?");
+                //MessageBoxResult result = ProjectManager.ShowQuestion("Вы действительно хотите удалить выбранный товар?");
 
-                if (result == MessageBoxResult.No)
-                    return;
+                //if (result == MessageBoxResult.No)
+                //    return;
 
-                selectedProduct.Product1.Clear();
-                if (!string.IsNullOrWhiteSpace(selectedProduct.MainImagePath))
-                    File.Delete(selectedProduct.MainImagePath);
-                ProjectManager.Context.Product.Remove(selectedProduct);
-                ProjectManager.Context.SaveChanges();
-                ProjectManager.ShowInformation("Товар и информация по прикрепленным товарам успешно удалена!");
-                UpdateProducts();
+                //selectedProduct.Product1.Clear();
+                //if (!string.IsNullOrWhiteSpace(selectedProduct.MainImagePath))
+                //    File.Delete(selectedProduct.MainImagePath);
+                //ProjectManager.Context.Product.Remove(selectedProduct);
+                //ProjectManager.Context.SaveChanges();
+                //ProjectManager.ShowInformation("Товар и информация по прикрепленным товарам успешно удалена!");
+                //UpdateProducts();
             }
             catch (Exception ex)
             {
