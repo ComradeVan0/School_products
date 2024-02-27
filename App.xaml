@@ -1,0 +1,48 @@
+﻿<Application
+    x:Class="Товары_школы_Кравец.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:classes="clr-namespace:Товары_школы_Кравец.Classes"
+    xmlns:local="clr-namespace:Товары_школы_Кравец"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    StartupUri="AuthWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="Color.Background.Main" Color="White" />
+        <SolidColorBrush x:Key="Color.Background.Alternative" Color="#FFE7FABF" />
+        <SolidColorBrush x:Key="Color.Background.Focus" Color="#FF04A0FF" />
+
+        <FontFamily x:Key="Font.Main">Comic Sans MS</FontFamily>
+
+        <system:String x:Key="String.App.Title">Great Britain</system:String>
+
+        <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="Window">
+            <Setter Property="Title" Value="{StaticResource String.App.Title}" />
+            <Setter Property="FontFamily" Value="{StaticResource Font.Main}" />
+            <Setter Property="Background" Value="{StaticResource Color.Background.Main}" />
+            <Setter Property="MinWidth" Value="800" />
+            <Setter Property="MinHeight" Value="600" />
+            <Setter Property="Width" Value="800" />
+            <Setter Property="Height" Value="600" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource Color.Background.Focus}" />
+            <Setter Property="Padding" Value="15,3" />
+            <Setter Property="FontFamily" Value="{StaticResource Font.Main}" />
+        </Style>
+
+        <Style
+            x:Key="blockStyle"
+            BasedOn="{StaticResource {x:Type TextBlock}}"
+            TargetType="TextBlock">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="FontFamily" Value="{StaticResource Font.Main}" />
+        </Style>
+
+        <BitmapImage x:Key="ImageNull" UriSource="Resources\NoImage.jpg" />
+
+        <classes:FromBoolToStringActiveConverter x:Key="FromBoolToStringActive" />
+        <classes:FromStringToImageConverter x:Key="FromStringToImage" />
+
+    </Application.Resources>
+</Application>
